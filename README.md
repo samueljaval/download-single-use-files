@@ -7,3 +7,5 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
  - This script will only run on macOS
  - It should be run with python3 or more recent version
  - As it is, it only works for files downloaded from chrome and safari but can be easily modified to cover more browsers (comments in the code can help know what to change)
+
+![pop-up window that will appear when a file is downloaded](link-to-image)
