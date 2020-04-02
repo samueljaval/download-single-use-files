@@ -10,5 +10,6 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 
 
 ![pop-up window that will appear when a file is downloaded](img/image.png)
-If you click yes, the file will open and it will be single use. 
-If you click no, the file won't open but will remain in the "Downloads" directory
+
+- If you click yes, the file will open and it will be single use. 
+- If you click no, the file won't open but will remain in the "Downloads" directory
