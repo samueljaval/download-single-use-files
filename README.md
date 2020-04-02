@@ -9,7 +9,7 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
  - As it is, it only works for files downloaded from chrome and safari but can be easily modified to cover more browsers (comments in the code can help know what to change)
 
 
-![pop-up window that will appear when a file is downloaded](img/image.png)
+![pop-up window that will appear when a file is downloaded](img/popup.png)
 
 - If you click yes, the file will open and it will be single use. 
 - If you click no, the file won't open but will remain in the "Downloads" directory
