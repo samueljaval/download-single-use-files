@@ -11,8 +11,9 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 
 ![pop-up window that will appear when a file is downloaded](img/popup.png)
 
-- If you click yes, the file will open and it will be single-use. 
+- If you click yes, the file will open and it will be single-use
 - If you click no, the file won't open but will remain in the "Downloads" directory
+- If you click no & move, you can choose which directory you want to put your file in
 
 The python script can be made into an executable as follows : 
 - change the .py extension to .command 
