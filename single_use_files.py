@@ -4,6 +4,7 @@
 # currently works for chrome and safari downloads but can easily be modified for more browsers
 
 import tkinter as tk
+from tkinter import filedialog
 import glob
 import os
 import time
@@ -26,16 +27,25 @@ def delete(checkfornew,root):
     os.remove(checkfornew)
     root.destroy()
 
+# move the file to a selected directory
+def movefile(checkfornew,root):
+    directory = tk.filedialog.askdirectory()
+    if directory != os.path.expanduser('~')+"/Downloads":
+        os.system('mv ' + fit_to_unix(checkfornew) + ' ' + fit_to_unix(directory))
+    root.destroy()
+
 
 def create_popup(checkfornew,root):
-    canvas = tk.Canvas(root, width = 160, height = 50)
+    canvas = tk.Canvas(root, width = 235, height = 50)
     center(root)
-    root.title("Single use file?")
+    root.title("Single-use file?")
     canvas.pack()
     button_yes = tk.Button (root, text='yes',command = lambda *args: delete(checkfornew,root))
     button_no = tk.Button (root, text='no', command = root.destroy)
-    canvas.create_window(50, 30, window=button_yes)
-    canvas.create_window(115,30, window=button_no)
+    button_move = tk.Button(root, text='no & move', command = lambda *args: movefile(checkfornew,root))
+    canvas.create_window(40, 30, window=button_yes)
+    canvas.create_window(105,30, window=button_no)
+    canvas.create_window(175, 30, window=button_move)
     root.mainloop()
 
 # get the name of the newly downloaded file
