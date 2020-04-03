@@ -13,3 +13,8 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 
 - If you click yes, the file will open and it will be single-use. 
 - If you click no, the file won't open but will remain in the "Downloads" directory
+
+The python script can be made into an executable as follows : 
+- change the .py extension to .command 
+- run the follwing command in the terminal (at the location of the file of course):
+         chmod +x single_use_files.command 
