@@ -1,6 +1,6 @@
 # Download Single-Use Files!
 
-When this python script is running, everytime the user downloads a file to the "Downloads" directory, it will ask through a pop-up window if they want to make this download a single-use file. A single-use file would be a file that is opened right after the download and deleted after that. So once closed the file will never be accessible again. The point of this is to automatically get rid of all the files we download to just have a quick look at them and never use again. 
+When this python script is running, everytime the user downloads a file to the "Downloads" directory, it will ask through a pop-up window if they want to make this download a single-use file. A single-use file would be a file that is opened right after the download and deleted after that. So once closed the file will never be accessible again. The point of this is to automatically get rid of all the files we download to just have a quick look at them and never use again.
 
 YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 
@@ -15,7 +15,23 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 - If you click no, the file won't open but will remain in the "Downloads" directory
 - If you click no & move, you can choose which directory you want to put your file in
 
-The python script can be made into an executable as follows : 
-- change the .py extension to .command 
-- run the follwing command in the terminal (at the location of the file of course):
-         chmod +x single_use_files.command 
+You can run the script in the background using the following command:
+
+nohup python single_use_files.py &
+
+or
+
+nohup python3 single_use_files.py &
+
+(depending on how you call python from your terminal)
+
+You can then close your terminal and the script will still be running
+To stop the scipt from running, you need to run the follwing command :
+
+ps aux | grep single_use_file
+
+which will give you something looking like this :
+
+username           18091   0,0  0,2   395900  16112   ??  S     4:24     0:07.84 /Library/Frameworks/Python.framework/Versions/3.6/Resources/Python.app/Contents/MacOS/Python various_codes/download-single-use-files/single_use_files.py
+
+you can kill the script using : kill 18091 (of course you would use your equivalent number, called "PID")
