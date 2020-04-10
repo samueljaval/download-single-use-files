@@ -15,18 +15,18 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 - If you click no, the file won't open but will remain in the "Downloads" directory
 - If you click no & move, you can choose which directory you want to put your file in
 
-You can run the script in the background using the following command:
-nohup python single_use_files.py &
-or
-nohup python3 single_use_files.py &
+You can run the script in the background using the following command: <br/>
+nohup python single_use_files.py & <br/>
+or <br/>
+nohup python3 single_use_files.py & <br/>
 (depending on how you call python from your terminal)
 
-You can then close your terminal and the script will still be running
-To stop the scipt from running, you need to run the follwing command :
+You can then close your terminal and the script will still be running.
 
+To stop the scipt from running, you need to run the follwing command : <br/>
 ps aux | grep single_use_file
 
-which will give you something looking like this :
+which will give you something looking like this : <br/>
 username           18091   0,0  0,2   395900  16112   ??  S     4:24     0:07.84 /Library/Frameworks/Python.framework/Versions/3.6/Resources/Python.app/Contents/MacOS/Python various_codes/download-single-use-files/single_use_files.py
 
 you can kill the script using : kill 18091 (of course you would use your equivalent number, called "PID")
