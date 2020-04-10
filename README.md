@@ -25,7 +25,7 @@ nohup python3 single_use_files.py &
 ```
 (depending on how you call python from your terminal)
 
-You can then close your terminal and the script will still be running. You can close the terminal window but cannot close the terminal app. 
+You can then close your terminal and the script will still be running.
 
 To stop the script from running, you need to run the following in your command line : <br/>
 ```

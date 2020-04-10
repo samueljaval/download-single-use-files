@@ -9,6 +9,7 @@ import glob
 import os
 import time
 import sys
+import subprocess
 
 # centering the pop up window
 def center(root):
@@ -26,6 +27,7 @@ def delete(checkfornew,root):
     time.sleep(1)
     os.remove(checkfornew)
     root.destroy()
+
 
 # move the file to a selected directory
 def movefile(checkfornew,root):
@@ -46,6 +48,9 @@ def create_popup(checkfornew,root):
     canvas.create_window(40, 30, window=button_yes)
     canvas.create_window(105,30, window=button_no)
     canvas.create_window(175, 30, window=button_move)
+    root.lift()
+    root.attributes('-topmost',True)
+    root.after_idle(root.attributes,'-topmost',False)
     root.mainloop()
 
 # get the name of the newly downloaded file
@@ -64,6 +69,7 @@ def fit_to_unix(filename):
             newname += char
     return newname
 
+#returns number of elements in download directory
 def size_downloads():
     return len(os.listdir(os.path.expanduser('~')+"/Downloads"))
 
@@ -81,7 +87,7 @@ def main():
             if not checkfornew.endswith('.crdownload') and not checkfornew.endswith('.download'):
                 if checkfornew != newest :
                     root = tk.Tk()
-                    os.system('''/usr/bin/osascript -e 'tell app "Finder" to set frontmost of process "Python" to true' ''')
+                    subprocess.call(['osascript', '-e', 'tell app "Finder" to set frontmost of process "Python" to true'])
                     create_popup(checkfornew,root)
                     newest = newest_file()
         size_folder = new_size_folder
