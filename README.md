@@ -15,7 +15,7 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
 - If you click no, the file won't open but will remain in the "Downloads" directory
 - If you click no & move, you can choose which directory you want to put your file in
 
-You can run the script in the background using the following command: <br/>
+You can run the script in the background using the following command in your command line: <br/>
 ```
 nohup python single_use_files.py &
 ```
