@@ -27,7 +27,7 @@ nohup python3 single_use_files.py &
 
 You can then close your terminal and the script will still be running.
 
-To stop the script from running, you need to run the following command : <br/>
+To stop the script from running, you need to run the following in your command line : <br/>
 ```
 ps aux | grep single_use_file
 ```
