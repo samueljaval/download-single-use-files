@@ -24,8 +24,8 @@ def center(root):
 # we open the file and delete it from the Downloads file to ensure the single use
 def delete(checkfornew,root):
     os.system('open ' + fit_to_unix(checkfornew))
-    time.sleep(1)
-    os.remove(checkfornew)
+    time.sleep(0.5)
+    os.system("rm -rf " + checkfornew)
     root.destroy()
 
 
@@ -82,14 +82,15 @@ def main():
     while True:
         checkfornew = newest_file()
         new_size_folder = size_downloads()
-        time.sleep(1)
+        time.sleep(0.5)
         if new_size_folder >= size_folder:      #check if the new most recent is not due to a deletion
             if not checkfornew.endswith('.crdownload') and not checkfornew.endswith('.download'):
                 if checkfornew != newest :
                     root = tk.Tk()
                     subprocess.call(['osascript', '-e', 'tell app "Finder" to set frontmost of process "Python" to true'])
                     create_popup(checkfornew,root)
-                    newest = newest_file()
+        if not checkfornew.endswith('.crdownload') and not checkfornew.endswith('.download'):
+            newest = checkfornew
         size_folder = new_size_folder
 
 main()
