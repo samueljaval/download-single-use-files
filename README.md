@@ -34,7 +34,8 @@ ps aux | grep single_use_file
 
 which will give you something looking like this : <br/>
 ```
-username           18091   0,0  0,2   395900  16112   ??  S     4:24     0:07.84 /Library/Frameworks/Python.framework/Versions/3.6/Resources/Python.app/Contents/MacOS/Python various_codes/download-single-use-files/single_use_files.py
+samuel           21502   0,3  0,2  4854684  12848   ??  S    10:31     0:28.57 /Users/samuel/Desktop/single_use_files_1.0.app/Contents/MacOS/single_use_files
+samuel           22785   0,0  0,0  4295688    860 s001  S+    4:45     0:00.01 grep --color=auto single
 ```
 
 you can kill the script using :
