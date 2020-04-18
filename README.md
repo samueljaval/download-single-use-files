@@ -40,6 +40,6 @@ samuel           22785   0,0  0,0  4295688    860 s001  S+    4:45     0:00.01 g
 
 you can kill the script using :
 ```
-kill 18091
+kill 21502
 ```
 (of course you would use your equivalent number, called "PID")
