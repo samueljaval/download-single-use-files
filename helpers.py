@@ -11,6 +11,20 @@ import time
 import multiprocessing as mp
 
 
+def security(checkfornew):
+    check1 = check_item(checkfornew,"/-")
+    check2 = check_item(checkfornew,"~")
+    check3 = check_item(checkfornew,"..")
+    check4 = check_item(checkfornew,"*")
+    check5 = secure_path(checkfornew)
+    check6 = check_item(checkfornew,"$")
+    check7 = check_item(checkfornew,":")
+    if check1 and check2 and check3 and check4 and check5 and check6 and check7:
+        return True
+    else :
+        return False
+
+
 # unix uses a \ before every space and parenthesis
 # fitting a path string to unix conventions
 def fit_to_unix(filename):
@@ -60,13 +74,7 @@ def check_item(checkfornew,item):
 def thread_removing(checkfornew, time_del):
     time.sleep(time_del)
     #security layer!!
-    check1 = check_item(checkfornew,"/-")
-    check2 = check_item(checkfornew,"~")
-    check3 = check_item(checkfornew,"..")
-    check4 = check_item(checkfornew,"*")
-    check5 = secure_path(checkfornew)
-    check6 = check_item(checkfornew,"$")
-    if check1 and check2 and check3 and check4 and check5:
+    if security(checkfornew):
         # i don't know the inner workings of os.remove so i treated it
         # and secured it as if it was the "rm" unix command to be safe.
         # Even if it might not be necessary, it doesn't hurt
@@ -74,7 +82,7 @@ def thread_removing(checkfornew, time_del):
 
 # opening the file before deleting it in another thread
 def remove(checkfornew, time_del):
-    if secure_path(checkfornew) and check_item(checkfornew,"*"):
+    if security(checkfornew):
         os.system('open ' + fit_to_unix(checkfornew))
     time.sleep(0.5)
     p = mp.Process(target=thread_removing, args=(checkfornew, time_del,))
@@ -102,7 +110,7 @@ def move(checkfornew):
     if result != []:
         os.chdir(os.path.expanduser('~'))
         os.system("cd ../..")
-        if secure_path(checkfornew) and check_item(checkfornew,"*"):
+        if security(checkfornew):
             os.system("mv " + fit_to_unix(checkfornew) + " " + read_chosen_folder(result))
 
 ##########################  end moving file functions ###################

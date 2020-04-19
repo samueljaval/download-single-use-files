@@ -10,7 +10,7 @@ because I have included 'packages': ['rumps','pync'] which is very important
 """
 from setuptools import setup
 
-APP = ['single_use_files.py']
+APP = ['main.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
