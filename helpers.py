@@ -74,7 +74,8 @@ def thread_removing(checkfornew, time_del):
 
 # opening the file before deleting it in another thread
 def remove(checkfornew, time_del):
-    os.system('open ' + fit_to_unix(checkfornew))
+    if secure_path(checkfornew) and check_item(checkfornew,"*"):
+        os.system('open ' + fit_to_unix(checkfornew))
     time.sleep(0.5)
     p = mp.Process(target=thread_removing, args=(checkfornew, time_del,))
     p.start()
