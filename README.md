@@ -11,7 +11,6 @@ When you are asked whether they want it to be a single-use or not:
 - If you click no, the file won't open but will remain in the "Downloads" directory
 - If you click no & move, you can choose which directory you want to put your file in
 </br>
-</br>
 
 Technicalities: 
  - This app only runs on macOS
