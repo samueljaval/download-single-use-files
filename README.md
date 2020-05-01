@@ -10,7 +10,7 @@ YOUR "DOWNLOADS" DIRECTORY WILL FOREVER BE "CLEAN"!
  - You can test it by running the scripts using (with python3 or more recent): python main.py
  - As it is, it only works for files downloaded from chrome and safari but can be easily modified to cover more browsers (comments in the code can help know what to change)
 
-<img src="img/prompt.png" height="50%" width="50%" >    <img src="img/menu.png" height="16%" width="16%" > 
+<img src="img/prompt.png" height="50%" width="50%" >    <img src="img/menu.png" height="16.5%" width="16.5%" > 
 
 - If you click yes, the file will open and it will be single-use
 - If you click no, the file won't open but will remain in the "Downloads" directory
