@@ -19,7 +19,8 @@ def security(checkfornew):
     check5 = secure_path(checkfornew)
     check6 = check_item(checkfornew,"$")
     check7 = check_item(checkfornew,":")
-    if check1 and check2 and check3 and check4 and check5 and check6 and check7:
+    check8 = check_item(checkfornew, ";")
+    if check1 and check2 and check3 and check4 and check5 and check6 and check7 and check8:
         return True
     else :
         return False
